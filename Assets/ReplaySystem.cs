@@ -27,8 +27,10 @@ public class ReplaySystem : MonoBehaviour {
 		m_Rigidbody.isKinematic = true;
 		int frame = Time.frameCount % bufferFrames;
 		float time = Time.time;
-		this.transform.position = keyFrames [frame].position;
-		this.transform.rotation = keyFrames [frame].rotation;
+		if (keyFrames [frame] != null) {
+			this.transform.position = keyFrames [frame].position;
+			this.transform.rotation = keyFrames [frame].rotation;
+		}
 		print ("Playing Frame: " + frame);
 	}
 	void Record ()
