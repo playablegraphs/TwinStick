@@ -12,9 +12,13 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (CrossPlatformInputManager.GetButton("Fire1")) {
+		/*if (CrossPlatformInputManager.GetButton("Fire1")) {
 			replaySystem.isPlayBack = true;
 		} else
-			replaySystem.isPlayBack = false;
+			replaySystem.isPlayBack = false;*/
 	}
+	public void setPlayback(bool boolean){
+		replaySystem.isPlayBack = boolean;
+	}
+
 }
